@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.11.9 on win32)" generated="20240424 23:30:15.601" rpa="false" schemaversion="3">
+<suite id="s1" name="E2E" source="C:\Python311\pylearning\e2e.robot">
+<test id="s1-t1" name="Login Test" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=binary_location=r"C:\\Chrome\\chrome-win64\\chrome.exe";add_experimental_option("detach", True)</arg>
+<arg>executable_path=C:\\Chrome\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240424 23:30:15.908" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20240424 23:30:15.907" endtime="20240424 23:30:18.942"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>locator=//div[@class='login_logo']</arg>
+<arg>expected= Swag Labs</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240424 23:30:18.945" level="INFO">Verifying element '//div[@class='login_logo']' contains exact text ' Swag Labs'.</msg>
+<msg timestamp="20240424 23:30:19.204" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240424 23:30:19.204" level="FAIL">The text of element '//div[@class='login_logo']' should have been ' Swag Labs' but it was 'Swag Labs'.</msg>
+<status status="FAIL" starttime="20240424 23:30:18.944" endtime="20240424 23:30:19.208"/>
+</kw>
+<status status="FAIL" starttime="20240424 23:30:15.906" endtime="20240424 23:30:19.209">The text of element '//div[@class='login_logo']' should have been ' Swag Labs' but it was 'Swag Labs'.</status>
+</test>
+<status status="FAIL" starttime="20240424 23:30:15.602" endtime="20240424 23:30:19.211"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="E2E">E2E</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
